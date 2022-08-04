@@ -33,7 +33,7 @@ public class MyAuthenticationFilter extends UsernamePasswordAuthenticationFilter
             String jsonData = request.getReader().lines().collect(Collectors.joining());
             Gson gson = new Gson();
             AccountLoginDto accountLoginDto = gson.fromJson(jsonData, AccountLoginDto.class);
-            UsernamePasswordAuthenticationToken userToken = new UsernamePasswordAuthenticationToken(
+            UsernamePasswordAuthenticationToken  userToken = new UsernamePasswordAuthenticationToken(
                     accountLoginDto.getUsername(), accountLoginDto.getPassword());
         return authenticationManager.authenticate(userToken);
         }catch (IOException exception){

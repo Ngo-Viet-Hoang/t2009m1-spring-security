@@ -29,7 +29,7 @@ class AccountServiceTest {
     @Test
     void login() {
         AccountLoginDto accountLoginDto = new AccountLoginDto();
-        accountLoginDto.setUsername("viethoang01");
+        accountLoginDto.setUsername("viethoang04");
         accountLoginDto.setPassword("123445");
         Credential credential = accoutService.login(accountLoginDto);
         System.out.println(credential.toString());
